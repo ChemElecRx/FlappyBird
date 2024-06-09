@@ -1,0 +1,52 @@
+
+<!--first model-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>First Model</title>
+        <link rel="stylesheet" href="flappybird.css">
+    </head>
+
+<div id="game">
+  <canvas id="board"></canvas>
+</div>
+<p>NEAT (NeuroEvolution of Augmenting Topologies) was introduced in the field of artificial intelligence in 2002 by Kenneth O. Stanley and Risto Miikkulainen. NEAT is an evolutionary algorithm designed to evolve artificial neural networks with complex structures and behaviors. Unlike traditional neural network training methods, NEAT evolves both the weights of connections and the structure of the network itself, allowing for the emergence of increasingly sophisticated solutions to complex problems. It starts with a population of simple networks and gradually evolves them over generations, favoring networks that perform better at the task at hand. NEAT's ability to dynamically adjust neural network architectures, allowing for the addition and removal of nodes and connections, makes it particularly effective in solving problems where the optimal network structure is not known in advance. The technology has found applications in various fields, including gaming, robotics, and optimization tasks. Utilizing NEAT to play Flappy Bird via the neataptic.js CDN demonstrates its versatility in training AI agents to navigate and excel in challenging environments.</p>
+
+<p>In the first model, we witness the impressive learning capabilities of neural evolution. Through this simulation, a population of 5,000 virtual birds evolves, leading to the development of effective strategies for navigating the demanding environment. Over roughly 30 generations, the algorithm makes notable progress, evident in the consistently higher scores achieved by the evolving birds. These substantial improvements in performance underscore the efficacy of neural evolution in refining behaviors suited for intricate tasks within dynamic surroundings. The collective learning observed among the bird population further highlights the potential of this approach in fostering adaptability and resilience within evolving systems.</p>
+
+<p><strong>Inputs A, B and C:</strong></p>
+<p>In both the first and second models of a bird navigating through pipes in a game, the inputs A, B, and C play critical roles in enabling the neural network to make informed decisions about the bird's movements. The first input, represented as <code>this.y / boardHeight</code>, signifies the bird's normalized vertical position relative to the game board's height, providing crucial spatial awareness for understanding the bird's vertical position on the screen. This knowledge is fundamental for determining whether the bird should ascend or descend to avoid obstacles like pipes or the ground. The second input, denoted as <code>this.velocity / 10</code>, offers insight into the bird's current rate of vertical movement, crucial for adjusting its flapping behavior dynamically and navigating smoothly through the pipes by controlling its ascent or descent. Lastly, the third input, represented by <code>pipes[0].x / boardWidth</code>, provides the normalized horizontal position of the first pipe, allowing the network to gauge the proximity of obstacles horizontally. This awareness is essential for accurately timing the bird's movements, ensuring it skillfully maneuvers to evade the pipes and progresses successfully through the game. Together, these inputs provide the neural network with comprehensive information about the bird's surroundings, empowering it to make effective decisions that optimize the bird's chances of navigating the obstacles and achieving its objectives in the game.</p>
+
+<p><strong>Inputs 1 and 2:</strong></p>
+<p>In the first model, Inputs 1 and 2, represented as <code>pipes[0].y / boardHeight</code> and <code>(pipes[1].y - pipeHeight) / boardHeight</code> respectively, work synergistically to provide crucial information about the vertical positions of the pipe openings. Input 1 focuses on the first pipe's opening, while Input 2 adjusts for the height of a pipe to determine the position of the second pipe's opening relative to the game board. Together, they offer a comprehensive understanding of the immediate obstacles ahead, aiding the neural network in anticipating upcoming challenges and planning the bird's movements accordingly.</p>
+
+<p><strong>Inputs 3 and 4:</strong></p>
+<p>Similarly, in the second model, Inputs 3 and 4, represented as <code>(pipes[0].y + pipeHeight) / boardHeight</code> and <code>(pipes[0].y + pipeHeight + openingSpace) / boardHeight</code> respectively, also work synergistically. They provide information about the boundaries of the gap the bird needs to pass through. Input 3 gives the vertical position of the bottom of the top pipe, while Input 4 provides the vertical position of the top of the bottom pipe, including the opening space. Together, they define the upper and lower boundaries of the gap, crucial for guiding the bird through the obstacle without colliding with the pipes.</p>
+
+<p><strong>Overall Importance:</strong></p>
+<p>Both sets of inputs, 1 and 2, as well as 3 and 4, are essential for the neural network to accurately assess the game environment and make decisions to navigate the bird successfully through the pipes. They complement each other by providing comprehensive information about the obstacles ahead, enabling an effective gameplay strategy.</p>
+
+<p><strong>Comparison of Synergies:</strong></p>
+<p>Comparing the synergies between Inputs 1 and 2, and Inputs 3 and 4, we observe how they each contribute to the neural network's understanding and decision-making process in navigating the game environment. The synergy between Inputs 1 and 2 aids in adjusting the strategy based on the relative positions of the pipe openings, while the synergy between Inputs 3 and 4 ensures precise navigation through the gap by providing clear boundaries for the bird to maneuver within. Overall, both synergies are crucial for the network to make informed decisions, ultimately enabling successful navigation of the bird through the pipes.</p>
+
+
+<p><strong>Output from the Neural Network</strong></p> 
+<p>The neural network produces a single output value, <code>output[0]</code>, which serves as a decision point determining whether the bird should flap its wings or not. If <code>output[0]</code> exceeds 0.5, the bird flaps (<code>this.flap()</code>), providing it with an upward velocity. This decision is crucial for the bird's navigation through the gaps between pipes, as it aims to keep the bird airborne and maneuvering effectively through its environment.</p>
+
+  <p style="margin-top:20; margin-bottom:0">See also</p>
+  <hr/ style="margin-top:0;">
+  <ul>
+    <li>
+      <a href="https://reflectionsandresonance.blogspot.com/p/flappy-bird.html">Flappy Bird Game</a>
+    </li>
+  </ul>
+
+<script src="neataptic.js"></script>
+
+<script src="first_model.js"></script>
+<!--first model-->
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+h3 {
+    display: none;
+  }
+  #board {
+    background-image: url("./flappybirdbg.png");
+  }
+  #game {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+  }
+  code {
+  	color: purple;
+  }
