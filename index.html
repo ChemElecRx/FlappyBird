@@ -7,21 +7,52 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <nav>
+    <header>
+        <div class="header-content">
+            <h1>Welcome to My Website</h1>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Flappy_Bird/flappy_bird.html">Flappy Bird Game</a></li>
+                <li><a href="Flappy_Bird/first_model.html">First Model</a></li>
+                <li><a href="Flappy_Bird/second_model.html">Second Model</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h2>NeuroEvolution of Augmenting Topologies (NEAT)</h2>
+
+        <h3>History</h3>
         <ul>
-            <li><a href="Flappy_Bird/flappy_bird.html">Flappy Bird Game</a></li>
-            <li><a href="Flappy_Bird/first_model.html">First Model</a></li>
-            <li><a href="Flappy_Bird/second_model.html">Second Model</a></li>
+            <li><strong>Creation:</strong> NEAT was developed by Kenneth O. Stanley in 2002 as part of his Ph.D. dissertation at the University of Texas at Austin. His research focused on evolving neural networks with the ability to change both their weights and their topologies.</li>
+            <li><strong>Core Idea:</strong> The main idea behind NEAT is to start with simple neural networks and gradually complexify them by adding new nodes and connections through a process similar to biological evolution. This allows the networks to evolve more sophisticated behaviors over time.</li>
+            <li><strong>Key Publication:</strong> The seminal paper, "Evolving Neural Networks through Augmenting Topologies," by Kenneth O. Stanley and Risto Miikkulainen, was published in the journal Evolutionary Computation in 2002. This paper laid the foundation for NEAT and demonstrated its effectiveness on several benchmark problems.</li>
+            <li><strong>Impact:</strong> NEAT has had a significant impact on the field of neuroevolution and has inspired numerous variants and extensions, such as HyperNEAT, which evolves large-scale neural network topologies for more complex tasks.</li>
         </ul>
-    </nav>
-    <p style="margin-top:20; margin-bottom:0">See also</p>
-    <hr style="margin-top:0;">
-    <ul>
-      <li>
-        <a href="https://chemelecrx.blogspot.com/">ChemElec Rx Insights</a>
-      </li>
-    </ul>    
+
+        <h3>Fun Facts</h3>
+        <ul>
+            <li><strong>Complexification:</strong> One of NEAT’s distinctive features is its approach to complexification, where networks start simple and grow more complex over generations. This is in contrast to many other methods that start with a fixed topology.</li>
+            <li><strong>Genetic Encoding:</strong> NEAT uses a genetic encoding scheme that includes historical markings to keep track of the origin of genes. This innovation helps to preserve the structure of networks during crossover operations, making the evolutionary process more stable and efficient.</li>
+            <li><strong>Real-World Applications:</strong> NEAT has been applied to a wide range of problems, including robotic control, game playing, and even music generation. Its flexibility makes it suitable for any task where evolving neural networks could be beneficial.</li>
+            <li><strong>Open-Source Implementations:</strong> There are several open-source implementations of NEAT available, such as SharpNEAT for .NET, PyNEAT for Python, and NEAT-Python. These have made it accessible to a broader audience of researchers and developers.</li>
+            <li><strong>NEAT in Competitions:</strong> NEAT has been used successfully in various AI competitions, demonstrating its effectiveness in evolving agents capable of performing complex tasks in dynamic environments.</li>
+            <li><strong>Inspirational Influence:</strong> NEAT has influenced the development of other neuroevolution algorithms and has been a foundational technique for exploring the intersection of neural networks and evolutionary algorithms.</li>
+        </ul>
+    </main>
+    <footer>
+        <p style="margin-top: 20px; margin-bottom: 0;">See also</p>
+        <hr style="margin-top: 0;">
+        <ul>
+            <li><a href="https://chemelecrx.blogspot.com/">ChemElec Rx Insights</a></li>
+        </ul>
+    </footer>
     <script src="script1.js"></script>
 </body>
 </html>
