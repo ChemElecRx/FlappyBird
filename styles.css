@@ -142,7 +142,7 @@ nav ul.active {
 }
 
 footer {
-    margin-top: 20px;
+    padding-left: 10px;
     background-color: rgb(70,70,70);
     width: 100%; /* Full width of the body */
     bottom: 0; /* Align it to the bottom */
