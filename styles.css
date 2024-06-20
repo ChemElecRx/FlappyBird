@@ -11,6 +11,7 @@ body {
     color: #333;
     line-height: 1.6;
     padding: 20px;
+    margin: 0; /* Ensure no default margin */
 }
 
 .header-content {
@@ -24,10 +25,22 @@ h1 {
     margin-bottom: 20px;
     text-align: center;
     flex-grow: 1;
+    color: white;
 }
 
 header {
     margin-bottom: 20px;
+    background-color: rgb(70,70,70);
+    width: 100%; /* Full width of the body */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    position: fixed;
+    z-index: 1; /* Ensure it is on top of other elements */
+} 
+
+main {
+    margin-top: 100px; /* Adjust this value to match the height of the header */
+    margin-bottom: 100px;
 }
 
 nav {
@@ -87,6 +100,7 @@ nav ul li a:hover {
     h1 {
         text-align: left;
         margin-right: auto;
+        margin-left: 10px;
     }  
 
     .hamburger {
@@ -127,8 +141,13 @@ nav ul.active {
     display: flex;
 }
 
-hr {
-    margin: 20px 0;
+footer {
+    margin-top: 20px;
+    background-color: rgb(70,70,70);
+    width: 100%; /* Full width of the body */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Align it to the left */
+    position: fixed;
 }
 
 ul {
